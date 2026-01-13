@@ -5,7 +5,7 @@ config ZMK_KEYBOARD_NAME
     default "tws_lp_jis60"
 
 config ZMK_SPLIT_ROLE_CENTRAL
-    default y
+    default n
 
 config USB_DEVICE_PRODUCT
     default "tws_lp_jis60_Right"
@@ -22,7 +22,7 @@ config ZMK_KEYBOARD_NAME
     default "tws_lp_jis60"
 
 config ZMK_SPLIT_ROLE_CENTRAL
-    default n
+    default y
 
 config USB_DEVICE_PRODUCT
     default "tws_lp_jis60_Left"
