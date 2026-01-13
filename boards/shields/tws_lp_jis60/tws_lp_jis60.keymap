@@ -38,16 +38,33 @@
             display-name = "Lower Layer";
 // -----------------------------------------------------------------------------------------
 // |     |   F1  |  F2 |  F3 |  F4 |  F5 |  F6 |       |  F7 |  F8 |  F9 | F10 | F11 | F12 |     |     |
-//       |       | BT1 | BT2 | BT3 | BT4 | BT5 |       |     |     |     |     |     |     |     |     |
-//       |       | CLR |CLRAL|     |     |     |       |     |     |     |     |     |     |     |
-//       |       |     |     |     | CON | BAT |       | CON | BAT |     |     |     |     |     |
+//       |       |     |     |     |     |     |       |     |     |     |     |     |     |     |     |
 //       |       |     |     |     |     |     |       |     |     |     |     |     |     |     |
+//       |       |     |     |     |     |     |       |     |     |     |     |     |     |     |
+//       |       |     |     |     |     |     |       |     |     |     |     |mo 2 |     |     |
             bindings = <
-&trans  &kp F1 &kp F2       &kp F3         &kp F4       &kp F5       &kp F6             &kp F7   &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 &trans &trans
-        &trans &bt BT_SEL 0 &bt BT_SEL 1   &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4       &trans   &trans &trans &trans  &trans  &trans  &trans &trans
-        &trans &bt BT_CLR   &bt BT_CLR_ALL &trans       &trans       &trans             &trans   &trans &trans &trans  &trans  &trans  &trans
-        &trans &trans       &trans &trans  &ind_con     &ind_bat     &ind_con           &ind_bat &trans &trans &trans  &trans  &trans  &trans
-        &trans &trans       &trans &trans  &trans       &trans       &trans             &trans   &trans &trans &trans  &trans  &trans  &trans
+&trans  &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6    &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 &trans &trans
+        &trans &trans &trans &trans &trans &trans    &trans &trans &trans &trans  &trans  &trans  &trans &trans
+        &trans &trans &trans &trans &trans &trans    &trans &trans &trans &trans  &trans  &trans  &trans
+        &trans &trans &trans &trans &trans &trans    &trans &trans &trans &trans  &trans  &trans  &trans &trans
+        &trans &trans &trans &trans &trans &trans    &trans &trans &trans &trans  &mo 2   &trans  &trans &trans
+            >;
+        };
+
+        adjust_layer {
+            display-name = "Adjust Layer";
+// -----------------------------------------------------------------------------------------
+// |     |     |     |     |     |     |     |       |     |     |     |     |     |     |     |     |
+//       |     | BT1 | BT2 | BT3 | BT4 | BT5 |       |     |     |     |     |     |     |     |     |
+//       |     | CLR |CLRAL|     |     |     |       |     |     |     |     |     |     |     |
+//       |     |     |     |     | CON | BAT |       | CON | BAT |     |     |     |     |     |
+//       |     |     |     |     |     |     |       |     |     |     |     |     |     |     |
+            bindings = <
+&trans  &trans &trans       &trans         &trans       &trans       &trans    &trans   &trans &trans &trans  &trans  &trans  &trans &trans
+        &trans &bt BT_SEL 0 &bt BT_SEL 1   &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans &trans &trans &trans  &trans  &trans  &trans &trans
+        &trans &bt BT_CLR   &bt BT_CLR_ALL &trans       &trans       &trans    &trans   &trans &trans &trans  &trans  &trans  &trans
+        &trans &trans       &trans         &trans       &ind_con     &ind_bat  &ind_con &ind_bat &trans &trans &trans &trans  &trans &trans
+        &trans &trans       &trans         &trans       &trans       &trans    &trans   &trans &trans &trans  &trans  &trans  &trans &trans
             >;
         };
     };
