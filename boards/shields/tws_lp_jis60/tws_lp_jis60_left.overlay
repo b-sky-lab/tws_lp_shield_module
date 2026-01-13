@@ -1,5 +1,9 @@
 #include "tws_lp_jis60.dtsi"
 
+&default_transform {
+    col-offset = <7>;
+};
+
 &kscan0 {
     gpios
         = <&xiao_d 1 (GPIO_ACTIVE_HIGH)>
