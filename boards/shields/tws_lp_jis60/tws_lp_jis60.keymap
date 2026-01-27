@@ -36,42 +36,7 @@
         &kp TAB   &kp Q  &kp W    &kp E    &kp R     &kp T        &kp Y     &kp U     &kp I     &kp O    &kp P     &kp JP_AT    &kp JP_LBRACKET &kp ENTER
         &kp LCTRL &kp A  &kp S    &kp D    &kp F     &kp G        &kp H     &kp J     &kp K     &kp L    &kp SEMI  &kp JP_COLON &kp JP_RBRACKET
         &kp LSHFT &kp Z  &kp X    &kp C    &kp V     &kp B        &kp N     &kp M     &kp COMMA &kp DOT  &kp FSLH  &kp JP_UNDSCR &kp UP          &kp RSHFT
-        &kp LCTRL &mo 1  &kp LGUI &kp LALT &kp LANG2 &kp SPACE    &kp SPACE &kp LANG1 &kp RGUI  &kp RALT &mo 1     &kp LEFT     &kp DOWN        &kp RIGHT
-            >;
-        };
-
-        lower_layer {
-            display-name = "Lower Layer";
-// -----------------------------------------------------------------------------------------
-// |     |   F1  |  F2 |  F3 |  F4 |  F5 |  F6 |       |  F7 |  F8 |  F9 | F10 | F11 | F12 |     |     |
-//       |       |     |     |     |     |     |       |     |     |     |     |     |     |     |     |
-//       |       |     |     |     |     |     |       |     |     |     |     |     |     |     |
-//       |       |     |     |     |     |     |       |     |     |     |     |     |     |     |
-//       |       |     |     |     |     |     |       |     |     |     |     |mo 2 |     |     |
-            bindings = <
-&trans  &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6    &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 &trans &trans
-        &trans &trans &trans &trans &trans &trans    &trans &trans &trans &trans  &trans  &trans  &trans &trans
-        &trans &trans &trans &trans &trans &trans    &trans &trans &trans &trans  &trans  &trans  &trans
-        &trans &trans &trans &trans &trans &trans    &trans &trans &trans &trans  &trans  &trans  &trans &trans
-        &trans &trans &trans &trans &trans &trans    &trans &trans &trans &trans  &mo 2   &trans  &trans &trans
-            >;
-        };
-
-        adjust_layer {
-            display-name = "Adjust Layer";
-// -----------------------------------------------------------------------------------------
-// |     |     |     |     |     |     |     |       | TOG | TOG |     |     |     |     |     |     |
-//       |     | BT1 | BT2 | BT3 | BT4 | BT5 |       |     |     |     |     |     |     |     |     |
-//       |     | CLR |CLRAL|     |     |     |       |     |     |     |     |     |     |     |
-//       |     |     |     |     | CON | BAT |       | CON | BAT |     |     |     |     |     |
-//       |     |     |     |     |     |     |       |     |     |     |     |     |     |     |
-// Toggle Ubuntu Layer: Fn + mo2 + Y or U (tog 3 toggles between macOS/Ubuntu)
-            bindings = <
-&trans  &trans &trans       &trans         &trans       &trans       &trans    &tog 3   &tog 3 &trans &trans  &trans  &trans  &trans &trans
-        &trans &bt BT_SEL 0 &bt BT_SEL 1   &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans &trans &trans &trans  &trans  &trans  &trans &trans
-        &trans &bt BT_CLR   &bt BT_CLR_ALL &trans       &trans       &trans    &trans   &trans &trans &trans  &trans  &trans  &trans
-        &trans &trans       &trans         &trans       &ind_con     &ind_bat  &ind_con &ind_bat &trans &trans &trans &trans  &trans &trans
-        &trans &trans       &trans         &trans       &trans       &trans    &trans   &trans &trans &trans  &trans  &trans  &trans &trans
+        &kp LCTRL &mo 2  &kp LGUI &kp LALT &kp LANG2 &kp SPACE    &kp SPACE &kp LANG1 &kp RGUI  &kp RALT &mo 2     &kp LEFT     &kp DOWN        &kp RIGHT
             >;
         };
 
@@ -79,7 +44,7 @@
             display-name = "Ubuntu Layer";
 // -----------------------------------------------------------------------------------------
 // Ubuntu/Linux compatible layer - Uses Muhenkan/Henkan for IME switching
-// Only EISU/KANA keys are overridden, all other keys pass through to lower layers
+// Only EISU/KANA keys are overridden, all other keys pass through to default layer
 // |     |       |     |     |     |     |     |     |     |     |     |     |     |     |     |       |
 //       |       |     |     |     |     |     |     |     |     |     |     |     |     |     |       |
 //       |       |     |     |     |     |     |     |     |     |     |     |     |     |     |
@@ -91,6 +56,41 @@
         &trans &trans &trans &trans      &trans    &trans    &trans    &trans      &trans    &trans   &trans    &trans       &trans
         &trans &trans &trans &trans      &trans    &trans    &trans    &trans      &trans    &trans   &trans    &trans       &trans          &trans
         &trans &trans &trans &trans      &kp JP_MHEN &trans  &trans    &kp JP_HENK &trans    &trans   &trans    &trans       &trans          &trans
+            >;
+        };
+
+        lower_layer {
+            display-name = "Lower Layer";
+// -----------------------------------------------------------------------------------------
+// |     |   F1  |  F2 |  F3 |  F4 |  F5 |  F6 |       |  F7 |  F8 |  F9 | F10 | F11 | F12 |     |     |
+//       |       |     |     |     |     |     |       |     |     |     |     |     |     |     |     |
+//       |       |     |     |     |     |     |       |     |     |     |     |     |     |     |
+//       |       |     |     |     |     |     |       |     |     |     |     |     |     |     |
+//       |       |     |     |     |     |     |       |     |     |     |     |mo 3 |     |     |
+            bindings = <
+&trans  &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6    &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 &trans &trans
+        &trans &trans &trans &trans &trans &trans    &trans &trans &trans &trans  &trans  &trans  &trans &trans
+        &trans &trans &trans &trans &trans &trans    &trans &trans &trans &trans  &trans  &trans  &trans
+        &trans &trans &trans &trans &trans &trans    &trans &trans &trans &trans  &trans  &trans  &trans &trans
+        &trans &trans &trans &trans &trans &trans    &trans &trans &trans &trans  &mo 3   &trans  &trans &trans
+            >;
+        };
+
+        adjust_layer {
+            display-name = "Adjust Layer";
+// -----------------------------------------------------------------------------------------
+// |     |     |     |     |     |     |     |       | TOG | TOG |     |     |     |     |     |     |
+//       |     | BT1 | BT2 | BT3 | BT4 | BT5 |       |     |     |     |     |     |     |     |     |
+//       |     | CLR |CLRAL|     |     |     |       |     |     |     |     |     |     |     |
+//       |     |     |     |     | CON | BAT |       | CON | BAT |     |     |     |     |     |
+//       |     |     |     |     |     |     |       |     |     |     |     |     |     |     |
+// Toggle Ubuntu Layer: Fn + mo3 + Y or U (tog 1 toggles between macOS/Ubuntu)
+            bindings = <
+&trans  &trans &trans       &trans         &trans       &trans       &trans    &tog 1   &tog 1 &trans &trans  &trans  &trans  &trans &trans
+        &trans &bt BT_SEL 0 &bt BT_SEL 1   &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans &trans &trans &trans  &trans  &trans  &trans &trans
+        &trans &bt BT_CLR   &bt BT_CLR_ALL &trans       &trans       &trans    &trans   &trans &trans &trans  &trans  &trans  &trans
+        &trans &trans       &trans         &trans       &ind_con     &ind_bat  &ind_con &ind_bat &trans &trans &trans &trans  &trans &trans
+        &trans &trans       &trans         &trans       &trans       &trans    &trans   &trans &trans &trans  &trans  &trans  &trans &trans
             >;
         };
     };
