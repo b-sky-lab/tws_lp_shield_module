@@ -79,14 +79,15 @@
         adjust_layer {
             display-name = "Adjust Layer";
 // -----------------------------------------------------------------------------------------
-// |     |     |     |     |     |     |     |       | TOG | TOG |     |     |     |     |     |     |
+// |     |     |     |     |     |     |     |       | TOG | TOG |     |     |     |     |     | OFF |
 //       |     | BT1 | BT2 | BT3 | BT4 | BT5 |       |     |     |     |     |     |     |     |     |
 //       |     | CLR |CLRAL|     |     |     |       |     |     |     |     |     |     |     |
 //       |     |     |     |     | CON | BAT |       | CON | BAT |     |     |     |     |     |
 //       |     |     |     |     |     |     |       |     |     |     |     |     |     |     |
 // Toggle Ubuntu Layer: Fn + mo3 + Y or U (tog 1 toggles between macOS/Ubuntu)
+// Soft Off: Fn + mo3 + BS (manual sleep)
             bindings = <
-&trans  &trans &trans       &trans         &trans       &trans       &trans    &tog 1   &tog 1 &trans &trans  &trans  &trans  &trans &trans
+&trans  &trans &trans       &trans         &trans       &trans       &trans    &tog 1   &tog 1 &trans &trans  &trans  &trans  &trans &soft_off
         &trans &bt BT_SEL 0 &bt BT_SEL 1   &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans &trans &trans &trans  &trans  &trans  &trans &trans
         &trans &bt BT_CLR   &bt BT_CLR_ALL &trans       &trans       &trans    &trans   &trans &trans &trans  &trans  &trans  &trans
         &trans &trans       &trans         &trans       &ind_con     &ind_bat  &ind_con &ind_bat &trans &trans &trans &trans  &trans &trans
