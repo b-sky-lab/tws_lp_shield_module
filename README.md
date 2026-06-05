@@ -26,7 +26,7 @@
     - ステータスLEDの色の詳細は次を参照してください: https://github.com/caksoylar/zmk-rgbled-widget 
 
 
-![doc/images/keymap.png]
+![キーマップ](doc/images/keymap.png)
 
 
 https://www.keyboard-layout-editor.com/#/gists/35fc311bae26cc121fb2835988d3a9b2
