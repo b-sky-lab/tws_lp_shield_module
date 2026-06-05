@@ -1,6 +1,29 @@
 name: Build ZMK firmware
-on: [push, pull_request, workflow_dispatch]
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+  release:
+    types: [published]
 
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.3
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    # Attach firmware only when a Release is published from the GitHub UI.
+    if: github.event_name == 'release'
+    permissions:
+      contents: write
+    steps:
+      - name: Download firmware artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: firmware
+          path: firmware
+      - name: Upload firmware to the Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: firmware/*.uf2
