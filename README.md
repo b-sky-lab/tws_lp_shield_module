@@ -1,7 +1,7 @@
 # Tws-Lp-Jis60 Firmware
 
 ## 概要
-本リポジトリは [tws_lp_jis60](https://github.com/ar-kr/tws_lp_jis60)のファームウェアを提供するものです．
+本リポジトリは [tws_lp_jis60](https://github.com/b-sky-lab/tws_lp_jis60)のファームウェアを提供するものです．
 
 ## キーマップ
 
